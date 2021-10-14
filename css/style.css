@@ -1,0 +1,301 @@
+body {
+    background: rgba(0, 0, 0, 0.9);
+    margin: 0;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .header::after {
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-image: url('/img/Todogaraje.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+  }
+  
+  .header:hover::after {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  }
+  
+  .header:hover .header-content {
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+  }
+  
+  .header-content {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    transition: all 1000ms;
+  }
+  
+  .header-content .logo {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+  }
+  
+  .header-content .text {
+    line-height: 1.7;
+    margin-top: 1rem;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+  }
+  
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 30px 30px 30px or repeat(3, 1fr)*/
+    grid-gap: 20px;
+  }
+  
+  .grid-2 {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .text-center {
+    text-align: center;
+    margin: auto;
+  }
+  
+  .bg-light {
+    background: #fff;
+    color: #333;
+  }
+  
+  .bg-dark {
+    background: #2f3542;
+    color: #f4f4f4;
+  }
+  
+  .services {
+    padding: 2rem 0;
+  }
+  
+  footer {
+    padding: 2.2rem;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 560px) {
+    .header::after {
+      height: 50vh;
+    }
+    
+    .header-content {
+      top: 5%;
+      margin-top: 5px;
+    }
+  
+    .header-content .logo {
+      height: 140px;
+      width: 140px;
+    }
+  
+    .header-content .text {
+      display: none;
+    }
+    
+    .grid-3, .grid-2 {
+      grid-template-columns: 1fr;
+    }
+  
+    .services div {
+      padding: 1.4rem 1rem;
+    }
+  }
+  
+  /* Landscape */
+  @media(max-height: 500px) {
+    .header-content .title, .header-content .text {
+      display: none;
+    }
+    .header-content {
+      top: 0;
+    }
+  }
+
+#hslogo {
+    max-width:100%;
+    width: 400px;
+    height: 150px;
+    border: 1px solid black;
+}
+
+
+
+
+.slider {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: cambio 20s infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    width: 300px;
+}
+
+@keyframes cambio {
+    0%  { margin-left: 0;}
+    20% { margin-left: 0;}
+
+    25% { margin-left: -100%;}
+    45% { margin-left: -100%;}
+
+    50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+
+    75% { margin-left: -300%;}
+    100% { margin-left: -300%;}
+}
+
+img {
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+    margin-top: 10px;
+}
+
+.menuhs {    
+    font-family: Verdana;
+    font-size: 19px;
+    font-style: normal;
+    font-display: normal;
+    font-stretch: normal;
+    font-language-override: normal;
+    font-kerning: auto;
+    font-synthesis: none;
+    margin-right: 90px;
+}
+
+#waw {
+    margin-right: 50px;
+}
+.menuhs li {
+    list-style: none;
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+    font-size: 20px;
+    font-style: normal;
+    font-display: normal;
+    font-stretch: normal;
+    text-align: center;
+    text-transform: capitalize;
+    text-overflow: clip;
+    direction: normal;
+}
+
+table {
+    margin: 12px;
+    font-family: verdana;
+    text-align: center;
+}
+
+.titulotabla {
+    background-color: #f6e58d;
+    text-align: center;
+}
+.montag {
+    background-color: #95afc0;
+}
+.dienstag {
+    background-color:#f6e58d;
+}
+.mittwoch {
+    background-color: #95afc0;
+}
+.donnerstag {
+    background-color: #f6e58d;
+}
+
+.freitag {
+    background-color: #95afc0;
+}
+
+.samstag {
+    background-color: #f6e58d;
+}
+
+.email, .correo {
+    background-color: #95afc0;
+}
+.adresa, .calle {
+    background-color: #95afc0;
+}
+.telefon, .numero {
+    background-color: #f6e58d;
+    text-align: center;
+}
+
+.dia, .hora {
+    font-size: 17px;
+}
+
+#calle  {
+    color: white
+}
+
+#iconmap {
+    margin-top: 160px;
+}
+
+#iconhour {
+    margin-top: 210px;
+    margin-right: 210px;
+}
+
+#iconwas {
+    margin-top: 65px;
+    margin-left: 100px;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+.completedit, .garaje1, .todogaraje, .mediogaraje { 
+    max-width: 100%;  
+    height: auto;  
+}
